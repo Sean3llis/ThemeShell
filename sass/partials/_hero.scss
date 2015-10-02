@@ -1,0 +1,10 @@
+#hero {
+	background-color: #eee;
+	text-align: center;
+	.contain {
+		height: 400px;
+		.titles {
+			@include vertical-align;
+		}
+	}
+}

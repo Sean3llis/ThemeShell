@@ -3,17 +3,15 @@
 @import 'variables';
 @import 'mixins';
 
+// Import partials
+@import 'partials/hero';
 
 
-.a {
-	color: red;
-	.b {
-		color: blue;
-		.c {
-			margin: 10px;
-			h1 {
-				color: tomato;
-			}
-		}
-	}
+
+.contain {
+	max-width: 1200px;
+	margin: 0 auto;
 }
+
+
+.row { margin: none; }

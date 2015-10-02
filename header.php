@@ -7,3 +7,18 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+<div class="fluid-container">
+<nav>
+	<div class="contain">
+	<?php
+		$args = array(
+			'theme_location'  => 'primary_menu',
+			'container'       => false,
+			'menu_class'			=> 'list-inline'
+		);
+
+		wp_nav_menu($args);
+
+	?>
+	</div>
+</nav>

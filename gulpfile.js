@@ -21,11 +21,11 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('sass/*.scss', ['sass']);
+    gulp.watch('**/*.scss', ['sass']);
 });
 
 gulp.task('minify-css', function() {
-  return gulp.src('css/theme.min.css') // much faster 
+  return gulp.src('css/theme.css') // much faster 
     .pipe(minifyCSS({ compatibility: 'ie8' }))
     .pipe(rename('theme.min.css'))
     .pipe(gulp.dest('css'));
