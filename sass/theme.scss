@@ -1,0 +1,19 @@
+
+// Import globals
+@import 'variables';
+@import 'mixins';
+
+
+
+.a {
+	color: red;
+	.b {
+		color: blue;
+		.c {
+			margin: 10px;
+			h1 {
+				color: tomato;
+			}
+		}
+	}
+}
