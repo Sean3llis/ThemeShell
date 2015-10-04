@@ -1,29 +1,16 @@
 <?php get_header(); ?>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="a">
-	<div class="b">
-		<div class="c">
-			<h1>LOL</h1>
+<div class="row">
+	<div class="contain">
+		<div class="col-sm-12">
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php the_content(); ?>
+			<?php endwhile; endif; ?>
 		</div>
+		<div class="clearfix"></div>
 	</div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
 <?php get_footer(); ?>

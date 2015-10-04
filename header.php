@@ -6,7 +6,7 @@
 	<title><?php echo get_bloginfo('name') . ' | ' . get_the_title(); ?></title>
 	<?php wp_head(); ?>
 </head>
-<body>
+<body class="<?php body_class(); ?>">
 <div class="fluid-container">
 <nav>
 	<div class="contain">
