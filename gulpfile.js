@@ -1,15 +1,18 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var watch = require('gulp-watch');
 var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var ignore = require('gulp-ignore');
-var rimraf = require('gulp-rimraf');
+var livereload = require('gulp-livereload');
+
+// Not In Use:
+// var rimraf = require('gulp-rimraf');
+// var uglify = require('gulp-uglify');
+// var autoprefixer = require('gulp-autoprefixer');
+// var concat = require('gulp-concat');
+// var ignore = require('gulp-ignore');
 
 gulp.task('sass', function () {
     gulp.src('sass/*.scss')
@@ -17,7 +20,8 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('css/'));
+        .pipe(gulp.dest('css/'))
+        .pipe(livereload({start: true}));
 });
 
 gulp.task('watch', function () {
